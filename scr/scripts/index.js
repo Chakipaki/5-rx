@@ -43,7 +43,7 @@ const scrolling$ = fromEvent(document, 'scroll')
     );
 
 scrolling$.subscribe((posArr) => {
-    if (posArr[posArr.length - 1] <= 2152) {
+    if (posArr[posArr.length - 1] <= 2102) {
         headerAfterBtnEl.style.top = '-300px';
         headerEl.style.top = '0';
         // if (document.body.hasChildNodes(headerAfterBtnEl)) {
@@ -57,12 +57,11 @@ scrolling$.subscribe((posArr) => {
             headerEl.classList.remove('header-responsive');
             navContainerEl.classList.remove('header__menu-responsive');
     }
-    } else {
-        if (posArr[posArr.length -1] > rect.bottom) {
-            headerEl.style.top = '-300px';
-            headerAfterBtnEl.style.top = '0';
+    }
+    if (posArr[posArr.length -1] > rect.bottom) {
+        headerEl.style.top = '-300px';
+        headerAfterBtnEl.style.top = '0';
 
-            document.body.prepend(headerAfterBtnEl);
-        }
+        document.body.prepend(headerAfterBtnEl);
     }
 });
