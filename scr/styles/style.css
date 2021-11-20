@@ -25,18 +25,22 @@ body {
 }
 
 @keyframes showHeader {
+
   0% {
     top: -220px;
   }
+
   100% {
     top: 0;
   }
 }
 
 @keyframes hideHeader {
+
   0% {
     top: 0;
   }
+
   100% {
     top: -220px;
   }
@@ -69,23 +73,19 @@ body {
   width: 250px;
   max-width: 40%;
   height: 100%;
-  background: #66a459;
+  background: #66A459;
   transition: all .3s linear;
 }
 
 .menu__icon {
-  padding: 0 30px 0;
+  padding: 0 30px 0 0;
   display: none;
   cursor: pointer;
   transition: all .3s linear;
 }
 
-.header__logo:hover, .menu__icon:hover, .titleButton__title:hover {
-  color: #FFF700E2;
-}
-
 .header__menu {
-  padding: 0 30px 0;
+  padding: 0 30px 0 0;
   display: flex;
   font-size: 25px;
   align-items: flex-end;
@@ -97,7 +97,7 @@ body {
 }
 
 .menu__link:hover {
-  color: #0076ff;
+  color: #0076FF;
 }
 
 @media screen and (max-width: 768px) {
@@ -167,7 +167,7 @@ body {
   max-width: 50%;
   height: 40px;
   font-size: 25px;
-  background: #66a459;
+  background: #66A459;
   border: 0;
   border-radius: 10px;
   transition: all .3s linear;
@@ -186,6 +186,7 @@ body {
 }
 
 @keyframes hideButton {
+
   0% {
     opacity: 1;
   }
@@ -193,12 +194,6 @@ body {
   100% {
     opacity: 0;
   }
-}
-
-.header__button:hover {
-  color: #0076ff;
-  border-radius: 15px;
-  box-shadow: 8px 8px #334455;
 }
 
 .main {
@@ -216,14 +211,24 @@ body {
 }
 
 .main__button {
+  color: #FFF;
   margin: 30px 0;
   width: 350px;
   max-width: 50%;
   height: 40px;
   font-size: 25px;
-  background: #66a459;
+  background: #66A459;
   border: 0;
-  border: 1px solid #0076ff;
   border-radius: 10px;
   transition: all .3s linear;
+}
+
+.header__logo:hover, .menu__icon:hover, .titleButton__title:hover {
+  color: #FFF700E2;
+}
+
+.header__button:hover, .main__button:hover {
+  color: #0076FF;
+  border-radius: 15px;
+  box-shadow: 8px 8px #335;
 }

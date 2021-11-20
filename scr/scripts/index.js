@@ -5,7 +5,7 @@ const burgerEl = document.querySelector('[data-burger-icon]');
 const menuEl = document.querySelector('[data-navigation]');
 const headerEl = document.querySelector('[data-header]');
 const headerDefBtnEl = document.querySelector('[data-defHeader-button]');
-const headerAfterBtnBtnEl =document.querySelector('[data-afterBtn-button]');
+const headerAfterBtnBtnEl = document.querySelector('[data-afterBtn-button]');
 const mainEl = document.querySelector('[data-main]');
 const mainBtn = document.querySelector('[data-main-button]');
 
@@ -19,7 +19,6 @@ let headerHeight = 80;
 let windowTop = window.scrollY;
 let rect = mainBtn.getBoundingClientRect();
 let rectBottom = rect.bottom + windowTop;
-let rectTop = rect.top + windowTop;
 
 burgerEl.addEventListener('click', () => {
     if (menuEl.style.display === 'none') {
@@ -28,11 +27,10 @@ burgerEl.addEventListener('click', () => {
         headerEl.style.height = '220px';
         mainEl.style.padding = '220px 0';
         headerEl.style.background = '#f75f5f';
-    }
-    else {
+    } else {
         headerHeight = 80;
         headerEl.style.background = '#111';
-        mainEl.style.padding = '80px 0'
+        mainEl.style.padding = '80px 0';
         menuEl.style.display = 'none';
         headerEl.style.height = '80px';
     }
@@ -42,17 +40,15 @@ window.addEventListener('resize', () => {
     windowTop = window.scrollY;
     rect = mainBtn.getBoundingClientRect();
     rectBottom = rect.bottom + windowTop;
-    rectTop = rect.top + windowTop;
     if (window.innerWidth <= 768) {
-        console.log('768')
         menuEl.style.display = 'none';
     } else {
-        headerHeight = 80
-        mainEl.style.padding = '80px 0'
+        headerHeight = 80;
+        mainEl.style.padding = '80px 0';
         menuEl.style.display = 'flex';
         headerEl.style.height = '80px';
     }
-})
+});
 
 const scrolling$ = fromEvent(document, 'scroll')
     .pipe(
@@ -65,7 +61,7 @@ const scrolling$ = fromEvent(document, 'scroll')
 scrolling$.subscribe((posArr) => {
     if (headerHeight === 220) {
         headerEl.style.background = '#111';
-        mainEl.style.padding = '80px 0'
+        mainEl.style.padding = '80px 0';
         menuEl.style.display = 'none';
         headerEl.style.height = '80px';
     }
