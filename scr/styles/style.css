@@ -166,6 +166,7 @@ body {
   display: none;
   width: 350px;
   max-width: 50%;
+  margin: 0 20px;
   height: 40px;
   font-size: 25px;
   background: #66A459;
